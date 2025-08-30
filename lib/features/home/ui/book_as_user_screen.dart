@@ -125,7 +125,7 @@ class BookAsUserScreen extends StatelessWidget {
                                             value: context.read<BookingCubit>(),
                                             child: BookingDetailsScreen(
                                               cubit: context.read<BookingCubit>(),
-                                              bookingResponse: state.data as BookingResponse, // تمرير BookingResponse
+                                              bookingResponse: state.data as BookingResponse, 
                                             ),
                                           ),
                                         ),

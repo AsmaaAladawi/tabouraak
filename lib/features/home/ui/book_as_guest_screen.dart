@@ -295,7 +295,7 @@ class BookAsGuestScreen extends StatelessWidget {
                                         MaterialPageRoute(
                                           builder: (context) => BookingDetailsScreen(
                                             cubit: context.read<BookingCubit>(),
-                                            bookingResponse: state.data as BookingResponse, // تمرير BookingResponse مباشرة
+                                            bookingResponse: state.data as BookingResponse,
                                           ),
                                         ),
                                       );

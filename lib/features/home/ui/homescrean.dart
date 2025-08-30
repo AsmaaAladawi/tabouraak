@@ -10,14 +10,14 @@ import 'package:tabourak/core/routing/routes.dart';
 import 'package:tabourak/features/home/ui/booknow.dart';
 import 'package:tabourak/features/map/map_screen.dart';
 import 'package:tabourak/core/helpers/shared_pref_helper.dart';
-import 'package:tabourak/core/di/dependency_injection.dart'; // افتراضي لو بتستخدم DI
+import 'package:tabourak/core/di/dependency_injection.dart'; 
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   Future<UserInfoCubit> _initializeCubit() async {
     final token = await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken) ?? '';
-    final cubit = UserInfoCubit(getIt<UserInfoRepo>()); // استخدام DI
+    final cubit = UserInfoCubit(getIt<UserInfoRepo>()); 
     if (token.isNotEmpty) {
       cubit.fetchUserInfo(token);
     } else {

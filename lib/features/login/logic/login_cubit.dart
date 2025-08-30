@@ -9,7 +9,7 @@ import 'package:tabourak/features/home/logic/userinfoqubit.dart';
 import 'package:tabourak/features/login/data/models/login_request_body.dart';
 import 'package:tabourak/features/login/data/repos/login_repo.dart';
 import 'package:tabourak/features/login/logic/login_state.dart';
-import 'package:tabourak/core/di/dependency_injection.dart'; // افتراضي لو بتستخدم DI
+import 'package:tabourak/core/di/dependency_injection.dart'; 
 
 class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
@@ -59,7 +59,7 @@ class LoginCubit extends Cubit<LoginState> {
 
           if (token.isNotEmpty) {
             final userInfoCubit = UserInfoCubit(getIt<UserInfoRepo>());
-            userInfoCubit.fetchUserInfo(token); // await عشان نتاكد إن الـ request خلص
+            userInfoCubit.fetchUserInfo(token); 
           }
           emit(LoginState.success(loginResponse));
         },
@@ -83,7 +83,7 @@ class LoginCubit extends Cubit<LoginState> {
         await SharedPrefHelper.setSecuredString(SharedPrefKeys.userEmail, email);
         await SharedPrefHelper.setSecuredString(SharedPrefKeys.userPassword, password);
       }
-      DioFactory.setTokenIntoHeaderAfterLogin(token); // غيرت 'Bearer $token' لـ $token بس
+      DioFactory.setTokenIntoHeaderAfterLogin(token); 
     } catch (e) {
       print('Error saving user data: $e');
     }

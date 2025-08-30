@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tabourak/features/bookconfirm/widgets/picture7.dart';
 import 'package:tabourak/features/bookconfirm/widgets/textandbuttom7.dart';
-import 'package:tabourak/features/home/ui/widgets/textandbuttom2.dart';
 
 class Bookconfirm extends StatelessWidget {
   const Bookconfirm({super.key});
